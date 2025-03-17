@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>About page</title>
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+        
+
+
+
+        <style>
+            html, body {
+                height: 100%; 
+                margin: 0; 
+            }
+
+            body {
+                background-image: url('images/back.jpg');
+                background-size: cover;
+                background-position: center; 
+                background-attachment: fixed; 
+            }
+
+            .zoom-in {
+                animation: zoomInAnimation 1s forwards;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            @keyframes zoomInAnimation {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1.4);
+                    opacity: 0;
+                }
+            }
+
+           
+            .navbar {
+                background: transparent !important;
+                margin-top: 15px;
+            }
+
+           
+            .nav-buttons {
+                display: flex;
+                gap: 20px;
+                justify-content: flex-end;
+                align-items: center;
+                color: #ffffff; 
+            }
+
+            .nav-link:hover {
+                color: #3827b2 !important;
+                transform: scale(1.1);
+                transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+            }
+           
+
+
+
+            .form-button {
+                background-color: #02001100;
+                border: 4px solid #3827b2; 
+                border-radius: 15px;
+                color: #3827b2;
+                padding: 15px 30px;
+                font-size: 18px;
+                transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+                cursor: pointer;
+            }
+                
+            
+
+            .form-button:hover {
+               
+                transform: scale(1.2);
+            }
+
+            .container.text-center {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; 
+                position: relative; 
+            }
+
+            .container.text-center h1 {
+                color: #ffffff;
+                font-size: 68px;
+                letter-spacing: 2px;
+            }
+
+            .container.text-center hr {
+                border: 1px solid #ffffff;
+                width: 46%;
+                margin: 20px 0;
+            }
+
+            .container.text-center p {
+                color: #ffffff;
+                font-size: 25px;
+                font-family: 'Kanit', sans-serif;
+                font-weight: 100;
+            }
+        </style>
+    </head>
+
+
+
+
+
+    <body>
+        <nav class="navbar navbar-expand-lg" style="background: transparent; margin-top: 15px;">
+            <div class="container">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="TENEX Logo" style="height: 50px;">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="ms-auto nav-buttons">
+                        <div class="ms-auto nav-buttons">
+                            <a class="nav-link" href="#" style="font-family: 'Kanit', sans-serif;">About</a>
+                            
+                            <a class="nav-link" href="contact.html" style="font-family: 'Kanit', sans-serif;">Contact</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <!-- Main Content -->
+        <div class="container text-center">
+            <h1>About Us</h1>
+            <p id="abt"style="font-size: 18px; color: #ffffff;">TENEX is a Tenement Information Management System designed to streamline and enhance tenement operations through a dedicated application and website. Our system provides an efficient and secure way to manage tenant registrations, rent tracking, lease agreements, and report generation. The website utilizes Google Firebase for authentication and database management, ensuring reliable user verification and secure data storage. By leveraging Visual Basic and a robust database infrastructure, TENEX ensures improved data efficiency, easy accessibility, and enhanced security. Whether for landlords, property managers, or tenants, TENEX simplifies tenement management by offering a user-friendly interface and reliable data organization, making information retrieval faster and more convenient.
+               
+            </p>
+
+            <p id="abt"style="font-size: 18px; color: #ffffff;">
+                At TENEX, we prioritize privacy and data security. By using TENEX, users agree to comply with our Data Privacy and Security Agreement, which outlines the responsible use of tenant information, restricted access to authorized personnel, and strict adherence to confidentiality policies. We are committed to protecting user data and ensuring that all information stored within the system remains secure and accessible only to permitted users.
+
+                We fully comply with global data protection standards, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), ensuring that personal information remains protected and confidential. Our system employs secure encryption methods and strict access controls to safeguard data against unauthorized access.
+                
+                Whether you're a landlord, property manager, or tenant, TENEX simplifies tenement management by offering a user-friendly interface, reliable data organization, and fast information retrieval, making property management more efficient and convenient.
+            </p>
+
+            
+            <style>
+                .abt{
+                    @media only screen and (max-width: 768px) {
+  .inp p {
+    font-size: calc(16px + 0.5vw);
+  }
+}
+                }
+            </style>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+       
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            document.getElementById('formPageButton').addEventListener('click', function() {
+                document.body.classList.add('zoom-in');
+                
+                setTimeout(function() {
+                    window.location.href = 'login.html'; 
+                }, 1000); 
+            });
+        </script>
+    </body>
+</html>

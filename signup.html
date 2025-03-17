@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Login - TENEX</title>
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        
+        <style>
+           
+            html, body {
+                height: 100%; 
+                margin: 0; 
+            }
+
+            body {
+                background-image: url('images/back.jpg');
+                background-size: cover;
+                background-position: center; 
+                background-attachment: fixed; 
+            }
+
+            .zoom-in {
+                animation: zoomInAnimation 1s forwards;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            @keyframes zoomInAnimation {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1.4);
+                    opacity: 0;
+                }
+            }
+
+           
+            .navbar {
+                background: transparent !important;
+                margin-top: 15px;
+            }
+
+           
+            .nav-buttons {
+                display: flex;
+                gap: 20px;
+                justify-content: flex-end;
+                align-items: center;
+                color: #ffffff; 
+            }
+
+            .nav-link:hover {
+                color: #3827b2 !important;
+                transform: scale(1.1);
+                transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+            }
+
+
+
+          
+        
+    </style>
+
+    </head>
+    <body>
+       
+
+
+
+        <!-- Transparent Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="index.html">
+                    <img src="images/Logo.png" alt="TENEX Logo" style="height: 50px;">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="ms-auto nav-buttons">
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <input id="email" type="email" placeholder="Email">
+            <input id="password" type="password" placeholder="Password">
+            <div class="remember-me">
+               
+            </div>
+            <a>
+                <button id="btnLogin">Login</button>
+            </a>
+            <p id="error-message" style="color: red;"></p>
+            
+            
+            <style>
+                @keyframes zoomOutAnimation {
+                    0% {
+                        transform: translate(-50%, -50%) scale(1.3);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform: translate(-50%, -50%) scale(1);
+                        opacity: 1;
+                    }
+                }
+        
+                .login-container {
+                    background: #272727;
+                    padding: 20px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                    text-align: center;
+                    width: 90%;
+                    max-width: 400px;
+                    height: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1.1);
+                    opacity: 0;
+                    animation: zoomOutAnimation 0.7s ease-out forwards;
+                }
+        
+                input {
+                    display: block;
+                    width: 100%;
+                    padding: 10px;
+                    margin: 25px 0;
+                    border: 1px solid #ffffff;
+                    border-radius: 15px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                    background-color: #303030;
+                    color: white;
+                }
+        
+                input::placeholder {
+                    color: #7c7c7c;
+                    opacity: 1;
+                }
+        
+                button {
+                    background: #3827b2;
+                    color: white;
+                    border: none;
+                    padding: 15px;
+                    cursor: pointer;
+                    width: 85%;
+                    border-radius: 30px;
+                    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+                    margin: -30px;
+                }
+        
+                button:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                }
+        
+                h2 {
+                    color: white;
+                }
+        
+                .remember-me {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 50px;
+                    gap: 5px;
+                }
+        
+                .remember-me input[type="checkbox"] {
+                    margin-right: 10px;
+                    margin-top: 35px;
+                    
+                }
+        
+                .create-acc {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 14px;
+                    transition: color 0.3s ease, transform 0.3s ease;
+                }
+        
+                .create-acc:hover {
+                    color: #3827b2;
+                    transform: scale(1.10);
+                }
+               
+            </style>
+        
+            <script>
+                function checkLogin() {
+                    let username = document.getElementById("email").value;
+                    let password = document.getElementById("password").value;
+        
+                    const correctUsername = "admin@gmail.com";
+                    const correctPassword = "1234";
+        
+                    if (username === correctUsername && password === correctPassword) {
+                      
+                        localStorage.setItem("isLoggedIn", "true");
+                        window.location.href = "dashboard.html";
+                    } else {
+                        alert("Invalid username or password. Please try again.")
+                        localStorage.setItem("isLoggedIn", "false");
+                    }
+                }
+        
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.getElementById("btnLogin").addEventListener("click", checkLogin);
+                });
+            </script>
+        </div>
+        
+        
+
+
+        <!--  you have 2 script sources i feel like thats whats the error is idk -->
+        <!-- Bootstrap core JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
